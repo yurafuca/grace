@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+        <meta name="robots" content="noindex,nofollow,noarchive,noodp,noydir">
+
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+
+        <title>野心的なアーキテクチャ</title>
+
+        <link rel="stylesheet" href="../../../../css/stylesheet.css">
+    </head>
+    <body>
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-light">
+
+          
+          <span class="navbar-brand mb-0 h1"></span>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation" name="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-item nav-link " href="../../../../">Home</a>
+              
+              
+              <a class="nav-item nav-link " href="../../../../about/">About</a>
+            </div>
+          </div>
+        </nav>
+
+        <section id="page-title">
+          <h1><a href="../../../../">wait only upon god</a></h1>
+            <span id="author-name">
+            <h6><a href="../../../../about/">yurafuca</a></h6>
+          </span>
+        </section>
+
+
+<div class="blog-post">
+  <h1>野心的なアーキテクチャ</h1>
+  <div class="blog-post-content">
+    <p>大きめのアプリケーションを書くときにアーキテクチャが気になる．小さいアプリケーションであればとにかく頑張れば完成するけど，大きめのアプリケーションでは残念な結末を迎える．遠くのオブジェクトに無理やりアクセスしようとして Singleton の誘惑に負ける．不用意に継承する．ポリモーフィズムの利用機会を見逃し続ける．そういう些細な綻びが積算が開発者を惨めにさせプロジェクトを死に追いやる．</p>
+
+<p>究極のアーキテクチャが欲しいところだけれど，そういうのは現状では見つかっていないしこれからもそうだろう．Google は単一の方法であらゆるシナリオに適したアプリを作成するのは不可能と<a href="https://developer.android.com/jetpack/docs/guide">いっている</a>．</p>
+
+<p>最近流行っている Clean Architecture はクラス数が異常に増えるとかプラクティカルでないとか昔話と説教が多いという指摘も見かける．お前は現実の問題をまったくわかっていないとする<a href="https://www.amazon.com/gp/customer-reviews/R2ZIBX0K0M2QJC/">辛辣なレビュー</a>もある．読んでないけど目次にあらわれる「止まらない振り子」とか「今あなたたちを夫婦として宣言する」とかは確かにすこし鼻につく．</p>
+
+<p>Flux は比較的新しいアーキテクチャだけれど，結局おしゃれな Singleton だとか，パスが大回りになってパフォーマンスが落ちる場合があるとか，ボイラープレートが多いとかいろいろ不評も多い．準静的に書くためには甘んじて受け入れなければならないのかもしれない．</p>
+
+<p>翻って MVVM はやっぱり双方向はつらいとか，そもそも MVVM は流派が多い気がしていて「ViewModel は Model の影なんだから ViewModel は Model を生成するな，Singleton に持たせろ」という主張を見かける一方で Android Architecture Components では普通に ViewModel が Repository を生成しているし「MVVM は DataBinding だ」という主張に対して「MVVM は DataBinding を使っていなくてもよい」とする主張も見かける．実際に Android Architecture Components でも MVVM の最初のサンプルでは DataBinding を使わず LiveData で <code>// Update UI.</code> とかやっている．Singletons Are Evil の話に戻すと，MVVM の Model だって結局 Singleton だ．</p>
+
+<p>こんなことを普段考えているけど，たぶん任意のアーキテクチャを語るためには，それ以外のアーキテクチャを知る必要があるんだろうな．Web のすばらしさを知るためにステートフルな装置を RS-232C で制御するとか，Git のすばらしさを知るために Subversion を使うとか．でもそれだけのために無用のアプリを書くのも骨が折れる．やっていくしかない．</p>
+
+  </div>
+</div>
+
+<footer>
+    <hr>
+    <small>
+        &copy; yurafuca 2019
+    </small>
+</footer>
+</div> 
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+</body>
+</html>
+

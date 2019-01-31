@@ -1,0 +1,10 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "wait only upon god"
+theme = "basics"
+relativeURLs = true
+uglyurls = true
+publishDir = "docs"
+
+[params]
+  author = "yurafuca"

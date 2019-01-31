@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on wait only upon god</title>
+    <link>/post.html</link>
+    <description>Recent content in Posts on wait only upon god</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 30 Jan 2019 19:52:20 +0900</lastBuildDate>
+    
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>野心的なアーキテクチャ</title>
+      <link>/post/2019/01/29/ambitious-architecture.html</link>
+      <pubDate>Wed, 30 Jan 2019 19:52:20 +0900</pubDate>
+      
+      <guid>/post/2019/01/29/ambitious-architecture.html</guid>
+      <description>大きめのアプリケーションを書くときにアーキテクチャが気になる．小さいアプリケーションであればとにかく頑張れば完成するけど，大きめのアプリケーションでは残念な結末を迎える．遠くのオブジェクトに無理やりアクセスしようとして Singleton の誘惑に負ける．不用意に継承する．ポリモーフィズムの利用機会を見逃し続ける．そういう些細な綻びが積算が開発者を惨めにさせプロジェクトを死に追いやる．
+究極のアーキテクチャが欲しいところだけれど，そういうのは現状では見つかっていないしこれからもそうだろう．Google は単一の方法であらゆるシナリオに適したアプリを作成するのは不可能といっている．
+最近流行っている Clean Architecture はクラス数が異常に増えるとかプラクティカルでないとか昔話と説教が多いという指摘も見かける．お前は現実の問題をまったくわかっていないとする辛辣なレビューもある．読んでないけど目次にあらわれる「止まらない振り子」とか「今あなたたちを夫婦として宣言する」とかは確かにすこし鼻につく．
+Flux は比較的新しいアーキテクチャだけれど，結局おしゃれな Singleton だとか，パスが大回りになってパフォーマンスが落ちる場合があるとか，ボイラープレートが多いとかいろいろ不評も多い．準静的に書くためには甘んじて受け入れなければならないのかもしれない．
+翻って MVVM はやっぱり双方向はつらいとか，そもそも MVVM は流派が多い気がしていて「ViewModel は Model の影なんだから ViewModel は Model を生成するな，Singleton に持たせろ」という主張を見かける一方で Android Architecture Components では普通に ViewModel が Repository を生成しているし「MVVM は DataBinding だ」という主張に対して「MVVM は DataBinding を使っていなくてもよい」とする主張も見かける．実際に Android Architecture Components でも MVVM の最初のサンプルでは DataBinding を使わず LiveData で // Update UI. とかやっている．Singletons Are Evil の話に戻すと，MVVM の Model だって結局 Singleton だ．
+こんなことを普段考えているけど，たぶん任意のアーキテクチャを語るためには，それ以外のアーキテクチャを知る必要があるんだろうな．Web のすばらしさを知るためにステートフルな装置を RS-232C で制御するとか，Git のすばらしさを知るために Subversion を使うとか．でもそれだけのために無用のアプリを書くのも骨が折れる．やっていくしかない．</description>
+    </item>
+    
+    <item>
+      <title>疑えないもの</title>
+      <link>/post/2019/01/29/undoubted-truth.html</link>
+      <pubDate>Wed, 30 Jan 2019 19:52:07 +0900</pubDate>
+      
+      <guid>/post/2019/01/29/undoubted-truth.html</guid>
+      <description>コードを書いているときや日ごろ考えていることを書き留めておきたいと感じることが増えた．最近長い文章を書いていない気がするし，いろいろと内省したい気分なので思い浮かんだことをゆるく書いていきたいと考えている．飽きたらすぐにやめると思う．やると決めてひたむきに耐え続けるのはあまり得意じゃない．気がついたらやめていたとか，気がついたら続いていたとか，そのくらいの温度感がちょうどいい．
+使うサービスはいろいろ考えた．はじめは Scrapox がよさそうに感じた．理由は，Markdown を書くためにエディタを起動して preview でスタイルが壊れていないことを確認してサーバに deploy することがちいさく続けることの大きな負担になりそうだったから．けれど結局 Scrapbox を使うのはやめた．noindex を指定できないのはつらい．甲斐性のない文章をいつでもなかったことにできる安らぎが必要だ．
+GitHub Pages と Hugo を使おうと思う．手早くビルドできるのはいいことだ．案外心地よく感じられるかもしれないしね．</description>
+    </item>
+    
+  </channel>
+</rss>
